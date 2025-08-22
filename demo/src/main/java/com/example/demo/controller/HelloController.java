@@ -12,7 +12,7 @@ public class HelloController {
         if (principal != null) {
             String name = principal.getAttribute("name");
             String email = principal.getAttribute("email");
-            return String.format(
+            return String.format( //thymeleafで定義することでフォームに自動でCSRFトークンの送信ができるようになるが、今回は適応させてない。
                     """
                             <h1>Welcome to Google OAuth Demo!</h1>\
                             <h2>Your Account Information:</h2>\
